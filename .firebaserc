@@ -1,5 +1,14 @@
 {
   "projects": {
     "default": "tutorial-5291d"
+  },
+  "targets": {
+    "tutorial-5291d": {
+      "hosting": {
+        "testing-int": [
+          "test-fcc05"
+        ]
+      }
+    }
   }
 }
