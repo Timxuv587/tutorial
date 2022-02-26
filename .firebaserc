@@ -7,6 +7,9 @@
       "hosting": {
         "testing-int": [
           "test-fcc05"
+        ],
+        "main": [
+          "tutorial-5291d"
         ]
       }
     }
