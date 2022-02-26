@@ -26,4 +26,4 @@ jobs:
       - run: npm install
       - run: npm run build
       - run: npm install -g firebase-tools
-      - run: firebase deploy --token "${{ secrets.FIREBASE_DEPLOY_TOKEN }}" --non-interactive
+      - run: firebase deploy --token "$1//04vALcGy9h39oCgYIARAAGAQSNwF-L9Irg1LrQ894q6i-rhWcZW6ouXNgrgnHNGKoI73bzqIHF8uEmqic4BPUv2o-P9H0Y8BNJ5g" --non-interactive
