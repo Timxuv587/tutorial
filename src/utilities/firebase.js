@@ -21,7 +21,7 @@ const auth = getAuth(firebase);
 
 if (window.Cypress) {
     connectAuthEmulator(auth, "http://127.0.0.1:9099");
-    connectDatabaseEmulator(db, "127.0.0.1", 9000);
+    connectDatabaseEmulator(database, "127.0.0.1", 9000);
 
     signInWithCredential(auth, GoogleAuthProvider.credential(
         '{"sub": "qEvli4msW0eDz5mSVO6j3W7i8w1k", "email": "tester@gmail.com", "displayName":"Test User", "email_verified": true}'
