@@ -1,7 +1,7 @@
 import { initializeApp } from 'firebase/app';
-import { getAuth, GoogleAuthProvider, onIdTokenChanged, signInWithPopup, signOut } from 'firebase/auth';
+import { signInWithCredential , connectAuthEmulator,getAuth, GoogleAuthProvider, onIdTokenChanged, signInWithPopup, signOut } from 'firebase/auth';
 import React, { useState, useEffect } from 'react';
-import { getDatabase, onValue, ref, set } from 'firebase/database';
+import { getDatabase, connectDatabaseEmulator, onValue, ref, set } from 'firebase/database';
 
 const firebaseConfig = {
     apiKey: "AIzaSyDBNI9Umbh0nDvk0c8GwIgkoB14JMfMczs",
@@ -16,6 +16,17 @@ const firebaseConfig = {
 
 const firebase = initializeApp(firebaseConfig);
 const database = getDatabase(firebase);
+const auth = getAuth(firebase);
+//const firestore = getAuth(firebase);
+
+if (window.Cypress) {
+    connectAuthEmulator(auth, "http://127.0.0.1:9099");
+    connectDatabaseEmulator(db, "127.0.0.1", 9000);
+
+    signInWithCredential(auth, GoogleAuthProvider.credential(
+        '{"sub": "qEvli4msW0eDz5mSVO6j3W7i8w1k", "email": "tester@gmail.com", "displayName":"Test User", "email_verified": true}'
+    ));
+}
 
 export const useData = (path, transform) => {
     const [data, setData] = useState();

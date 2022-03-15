@@ -1,10 +1,12 @@
 {
   "ExpandedNodes": [
     "",
+    "\\.github",
+    "\\.github\\workflows",
     "\\src",
     "\\src\\components",
     "\\src\\utilities"
   ],
-  "SelectedNode": "\\src\\components\\CourseList.js",
+  "SelectedNode": "\\firebase.json",
   "PreviewInSolutionExplorer": false
 }
