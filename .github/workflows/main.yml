@@ -32,6 +32,8 @@ jobs:
           build: npm run build
           start: npm run em:run
           wait-on: http://localhost:3000
+        env:
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
 
   deploy:
     name: Firebase deploy
