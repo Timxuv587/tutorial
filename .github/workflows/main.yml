@@ -26,8 +26,8 @@ jobs:
           path: ~/.cache/firebase/emulators
           key: ${{ runner.os }}-firebase-emulators-${{ hashFiles('~/.cache/firebase/emulators/**') }}
 
-      - run: npm install -g firebase-tools
-
+      - run: npm install -g firebase-tools --token 1//04vALcGy9h39oCgYIARAAGAQSNwF-L9Irg1LrQ894q6i-rhWcZW6ouXNgrgnHNGKoI73bzqIHF8uEmqic4BPUv2o-P9H0Y8BNJ5g
+      - run: firebase login:ci --token 1//04vALcGy9h39oCgYIARAAGAQSNwF-L9Irg1LrQ894q6i-rhWcZW6ouXNgrgnHNGKoI73bzqIHF8uEmqic4BPUv2o-P9H0Y8BNJ5g
       - uses: cypress-io/github-action@v2
         with:
           build: npm run build
